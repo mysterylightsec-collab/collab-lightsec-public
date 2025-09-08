@@ -1,112 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Defense Bundle Organizer</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; }
-    h1 { color: #002244; }
-    h2 { color: #004488; margin-top: 30px; }
-    .bundle { background: #fff; border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 6px; }
-    .skeleton { margin-left: 20px; color: #333; }
-    pre { background: #f0f0f0; padding: 10px; border-radius: 4px; overflow-x: auto; }
-    a { color: #004488; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #444;
+    }
+    nav a {
+      color: #fff;
+      padding: 12px 20px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #666;
+    }
+    section {
+      padding: 20px;
+      margin: 10px auto;
+      max-width: 900px;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      padding: 6px 0;
+    }
+    .checklist input {
+      margin-right: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #222;
+      color: #aaa;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
-  <h1>Defense Bundle Organizer</h1>
-  <p>This page organizes draft bundles, blank templates, and placeholders for exhibits. Use it as a working dashboard.</p>
+  <header>
+    <h1>Defense Bundle Organizer</h1>
+    <p>A private legal-prep portal linking to California Judicial Council forms and draft bundles for court filing.</p>
+    <p><strong>⚠️ Personal use only. Not legal advice.</strong></p>
+  </header>
 
-  <!-- Mental Health Diversion Bundle -->
-  <div class="bundle">
-    <h2>Mental Health Diversion Bundle</h2>
-    <div class="skeleton">
-      <strong>Motion:</strong> Request Diversion under PC 1001.36<br>
-      <strong>Declaration (MC-030):</strong> Supporting statement of mental health history and treatment readiness.<br>
-      <strong>Exhibits:</strong> Medical records, treatment proof, support letters.<br>
-      <strong>Proposed Order:</strong> Court grants diversion into treatment.<br>
-      <p>
-        📄 <a href="https://www.courts.ca.gov/documents/mc030.pdf" target="_blank">MC-030 (Declaration Form)</a>
-      </p>
-    </div>
-    <pre>
-"I, Raymond Perry, declare that I have a history of mental health challenges that contributed to this case..."
-    </pre>
-  </div>
+  <nav>
+    <a href="#intake">Intake</a>
+    <a href="#bundles">Bundles</a>
+    <a href="#forms">Forms</a>
+    <a href="#checklist">Checklist</a>
+  </nav>
 
-  <!-- Continuance Bundle -->
-  <div class="bundle">
-    <h2>Continuance Bundle</h2>
-    <div class="skeleton">
-      <strong>Motion:</strong> CR-110 Request for Continuance<br>
-      <strong>Declaration (MC-030):</strong> Statement of need for more time (multiple cases, gathering records).<br>
-      <strong>Exhibits:</strong> Other court notices, pending medical docs.<br>
-      <strong>Proposed Order:</strong> New date granted for preparation.<br>
-      <p>
-        📄 <a href="https://www.courts.ca.gov/documents/cr110.pdf" target="_blank">CR-110 (Continuance Form)</a><br>
-        📄 <a href="https://www.courts.ca.gov/documents/mc030.pdf" target="_blank">MC-030 (Declaration Form)</a>
-      </p>
-    </div>
-  </div>
+  <section id="intake">
+    <h2>Client Intake Summary</h2>
+    <ul>
+      <li><strong>Name:</strong> Raymond Perry</li>
+      <li><strong>DOB:</strong> April 23, 1998</li>
+      <li><strong>Address:</strong> 546 Center Street, Watsonville, CA 95076</li>
+      <li><strong>Phone:</strong> 831-319-2027 / 727-739-5060</li>
+      <li><strong>Email:</strong> mysterylightsec@gmail.com</li>
+      <li><strong>Primary PD:</strong> Mark Briscoe</li>
+      <li><strong>Next Hearing:</strong> Tomorrow, 8:30 AM (Santa Cruz County)</li>
+      <li><strong>Concerns:</strong> Mental health, financials, potential substance abuse, jail safety</li>
+    </ul>
+  </section>
 
-  <!-- Custody & Safety Bundle -->
-  <div class="bundle">
-    <h2>Custody & Safety Bundle</h2>
-    <div class="skeleton">
-      <strong>Motion:</strong> Motion for OR Release / Bail Reduction<br>
-      <strong>Declaration (MC-030):</strong> Statement of safety risks (gang exposure, mental health vulnerability).<br>
-      <strong>Exhibits:</strong> Health docs, letters of support.<br>
-      <strong>Proposed Order:</strong> Remain on OR with treatment obligations.<br>
-      <p>
-        📄 <a href="https://www.courts.ca.gov/documents/mc030.pdf" target="_blank">MC-030 (Declaration Form)</a><br>
-        📄 <a href="https://www.courts.ca.gov/documents/cr115.pdf" target="_blank">CR-115 (Bail/OR Review Form)</a>
-      </p>
-    </div>
-  </div>
+  <section id="bundles">
+    <h2>Bundles</h2>
+    <ul>
+      <li><strong>Defense Motions</strong> — Suppression, Discovery, Alternative Sentencing</li>
+      <li><strong>Supporting Declarations</strong> — Personal statements, family input, treatment history</li>
+      <li><strong>Evidence Packet</strong> — Medical, financial, housing, prior case documents</li>
+      <li><strong>Treatment/Alternatives</strong> — Mental health evaluations, program options</li>
+      <li><strong>Correspondence</strong> — Letters to PD, court, probation, or social services</li>
+    </ul>
+  </section>
 
-  <!-- Alternative Sentencing Bundle -->
-  <div class="bundle">
-    <h2>Alternative Sentencing / Treatment Bundle</h2>
-    <div class="skeleton">
-      <strong>Motion:</strong> Request for Alternative Sentencing<br>
-      <strong>Declaration (MC-030):</strong> Commitment to treatment instead of incarceration.<br>
-      <strong>Exhibits:</strong> Rehab/treatment program info, community support.<br>
-      <strong>Proposed Order:</strong> Defendant placed in treatment program.<br>
-      <p>
-        📄 <a href="https://www.courts.ca.gov/documents/mc030.pdf" target="_blank">MC-030 (Declaration Form)</a>
-      </p>
-    </div>
-  </div>
-
-  <!-- Consolidation Bundle -->
-  <div class="bundle">
-    <h2>Consolidation / Coordination Bundle</h2>
-    <div class="skeleton">
-      <strong>Motion:</strong> Request for Coordinated Handling (multi-county)<br>
-      <strong>Declaration (MC-030):</strong> Explain overlapping issues (mental health, finances, systemic risks).<br>
-      <strong>Exhibits:</strong> Case numbers, mental health report.<br>
-      <strong>Proposed Order:</strong> Coordinated case management across counties.<br>
-      <p>
-        📄 <a href="https://www.courts.ca.gov/documents/mc030.pdf" target="_blank">MC-030 (Declaration Form)</a>
-      </p>
-    </div>
-  </div>
-
-  <!-- Evidence Packet -->
-  <div class="bundle">
-    <h2>Global Evidence Packet</h2>
-    <div class="skeleton">
-      <ul>
-        <li>Health & Mental Health Records</li>
-        <li>Financial Hardship Proof</li>
-        <li>Housing Status</li>
-        <li>Substance Use History / Treatment Efforts</li>
-        <li>Community Support Letters</li>
-      </ul>
-      <p>
-        📄 <a href="https://www.courts.ca.gov/forms.htm" target="_blank">Judicial Council Forms Index (All Forms)</a>
-      </p>
-    </div>
-  </div>
-</body>
-</html>
+  <section id="forms">
+    <h2>Key Court Forms (CA Judicial Council)</h2>
+    <ul>
+      <li><a href="https://www.courts.ca.gov/documents/mc200.pdf" target="_blank">MC-200 – Declaration</a></li>
+      <li><a href="https://www.courts.ca.gov/documents/mc410.pdf" target="_blank">MC-410 – Request to Waive Court Fees</a></li>
+      <li><a href="https://www.courts.ca.gov/documents/pos
