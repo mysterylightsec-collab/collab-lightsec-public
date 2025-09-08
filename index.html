@@ -2,120 +2,171 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>URGENT Defense Notice – Raymond Perry</title>
+  <title>Defense Materials – Raymond Perry</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; background:#fff; color:#000; }
-    header { background: #fdd; padding: 20px; border: 2px solid #a00; margin-bottom:20px; }
-    header h1 { margin: 0; color: #900; font-size: 24px; }
-    header p { margin: 10px 0; font-size: 16px; color: #000; }
-    .notice { font-weight: bold; font-size: 18px; background:#ffe; padding:15px; border:1px solid #aa0; }
-    h2 { border-bottom: 2px solid #444; padding-bottom: 5px; margin-top:30px; }
-    .signature-block { margin-top:50px; }
-    .plain { display:none; }
-    .toggle-buttons { margin:20px 0; }
-    .toggle-buttons button { padding:10px 15px; margin-right:10px; cursor:pointer; }
+    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; color:#000; }
+    header { text-align:center; margin-bottom:30px; }
+    header h1 { font-size: 28px; }
+    nav ul { list-style:none; padding:0; }
+    nav li { margin:8px 0; }
+    h2 { border-bottom:1px solid #333; padding-bottom:5px; margin-top:30px; }
+    .signature-block { margin-top:40px; }
+    .timestamp { font-style: italic; margin-top: 10px; }
+    footer { text-align:center; font-size: 12px; margin-top:40px; color:#444; }
+    .hidden { display:none; }
+    .toggle-btn { background:red; color:white; padding:10px 15px; border:none; cursor:pointer; font-weight:bold; margin-bottom:20px; }
+    .page-break { page-break-before: always; }
+    @media print {
+      .toggle-btn, nav { display:none; }
+      footer { position: fixed; bottom: 0; left: 0; right: 0; }
+    }
   </style>
   <script>
-    function showVersion(type) {
-      document.querySelector('.styled').style.display = (type==='styled') ? 'block':'none';
-      document.querySelector('.plain').style.display  = (type==='plain') ? 'block':'none';
+    function setTimestamp() {
+      const now = new Date();
+      const formatted = now.toLocaleString();
+      document.querySelectorAll('.timestamp').forEach(el => el.textContent = "Generated on: " + formatted);
     }
+    function toggleView(view) {
+      document.getElementById("emergency").classList.add("hidden");
+      document.getElementById("full").classList.add("hidden");
+      document.getElementById(view).classList.remove("hidden");
+    }
+    window.onload = setTimestamp;
+    window.onbeforeprint = setTimestamp;
   </script>
 </head>
 <body>
 
-<div class="toggle-buttons">
-  <button onclick="showVersion('styled')">Styled Version</button>
-  <button onclick="showVersion('plain')">Plain Version</button>
-  <button onclick="window.print()">🖨 Print</button>
+<header>
+  <h1>⚖️ Defense Materials – Raymond Perry</h1>
+  <p><strong>Defendant:</strong> Raymond Perry<br>
+  <strong>Counsel:</strong> Mark Briscoe, Public Defender</p>
+  <p class="timestamp"></p>
+  <p style="color:red; font-weight:bold;">CONFIDENTIAL – Attorney-Client Communication<br>
+  Prepared for Legal Defense Only</p>
+</header>
+
+<div style="text-align:center;">
+  <button class="toggle-btn" onclick="toggleView('emergency')">🚨 Emergency Handoff</button>
+  <button class="toggle-btn" style="background:blue;" onclick="toggleView('full')">📑 Full Defense Materials</button>
 </div>
 
-<!-- Styled Version -->
-<div class="styled">
-  <header>
-    <h1>⚠️ URGENT COURT NOTICE – GOOD CAUSE STATEMENT</h1>
-    <p class="notice">
-      On <strong>Saturday evening (5:58 PM)</strong>, my Public Defender informed me: 
-      <em>“Court tomorrow.”</em>  
-      This communication implied a <strong>Sunday court appearance</strong> — 
-      an impossibility under California Superior Court procedure.  
-      This miscommunication, combined with my <strong>serious health conditions</strong> 
-      (Lyme Disease and related complications), demonstrates <strong>good cause</strong> 
-      under <em>Penal Code §§ 977, 1043</em> to excuse any absence and to consider 
-      treatment-based alternatives rather than sanctions.
+<!-- Emergency Handoff Section -->
+<div id="emergency">
+  <h2 style="color:red;">🚨 URGENT NOTICE – GOOD CAUSE REQUEST</h2>
+  <p>
+    Due to miscommunication of court date and ongoing medical conditions (Lyme Disease 
+    and related complications), Defendant requests good cause relief pursuant to 
+    Penal Code §§ 977 and 1043.
+  </p>
+  <p>
+    Defendant cannot safely attend or be housed in custodial environments due to 
+    health risks. Alternatives to incarceration and community-based treatment 
+    options are respectfully requested.
+  </p>
+
+  <h2>Authorization for Counsel</h2>
+  <p>
+    I, Raymond Perry, authorize my appointed Public Defender, Mark Briscoe, to sign, 
+    file, and present documents on my behalf in this matter, consistent with 
+    California Penal Code §977.
+  </p>
+
+  <div class="signature-block">
+    <p>__________________________<br>
+    Raymond Perry – Defendant<br>
+    <span class="timestamp"></span></p>
+  </div>
+
+  <div class="signature-block">
+    <p>__________________________<br>
+    Authorized Counsel Signature (Mark Briscoe, Public Defender)<br>
+    <span class="timestamp"></span></p>
+  </div>
+</div>
+
+<!-- Full Defense Materials Section -->
+<div id="full" class="hidden">
+  <nav>
+    <h2>Table of Contents</h2>
+    <ul>
+      <li><a href="#good-cause">Good Cause Statement</a></li>
+      <li><a href="#health">Health & Safety Declarations</a></li>
+      <li><a href="#cases">Case Numbers & References</a></li>
+      <li><a href="#supporting">Supporting Documents</a></li>
+      <li><a href="#authorization">Authorization for Counsel</a></li>
+    </ul>
+  </nav>
+
+  <section id="good-cause">
+    <h2>Good Cause Statement</h2>
+    <p>
+      See attached urgent notice regarding miscommunication of court date and medical conditions 
+      as grounds under Penal Code §§ 977, 1043 for good cause continuance and treatment-based 
+      alternatives.
     </p>
-  </header>
+    <div class="page-break"></div>
+  </section>
 
   <section id="health">
-    <h2>Health & Safety Context</h2>
+    <h2>Health & Safety Declarations</h2>
     <p>
-      I suffer from <strong>Lyme Disease</strong> and related medical issues which make 
-      extended exposure in crowded detention environments unsafe. I respectfully request 
-      the Court consider alternatives to custody and allow me to continue treatment-based 
-      recovery in the community.
+      The defendant, Raymond Perry, suffers from Lyme Disease and related complications. 
+      Exposure to jail environments significantly worsens condition and presents unacceptable 
+      health risks. The Court is respectfully asked to consider community-based supervision, 
+      treatment, and alternatives to incarceration.
     </p>
+    <div class="page-break"></div>
+  </section>
+
+  <section id="cases">
+    <h2>Case Numbers & References</h2>
+    <ul>
+      <li>Santa Cruz County – [insert case number(s)]</li>
+      <li>Santa Clara County – [insert case number(s)]</li>
+    </ul>
+    <p>
+      These cases are interrelated and require consolidated consideration for any 
+      proposed solution.
+    </p>
+    <div class="page-break"></div>
+  </section>
+
+  <section id="supporting">
+    <h2>Supporting Documents</h2>
+    <p>
+      Exhibits to be attached separately (medical records, screenshots of PD communication, 
+      correspondence, prior filings). Placeholder section for inclusion by counsel.
+    </p>
+    <div class="page-break"></div>
   </section>
 
   <section id="authorization">
     <h2>Authorization for Counsel</h2>
     <p>
-      I, Raymond Perry, authorize my appointed Public Defender, <strong>Mark Briscoe</strong>, 
-      to sign, file, and present documents on my behalf in this matter, and to make any 
-      necessary appearances consistent with <em>California Penal Code §977</em>.  
-      This authorization is made in good faith to ensure my rights and health are protected.
+      I, Raymond Perry, authorize my appointed Public Defender, Mark Briscoe, to sign, file, and 
+      present documents on my behalf in this matter, consistent with California Penal Code §977.
     </p>
 
     <div class="signature-block">
-      <p>_________________________________<br>
-      Raymond Perry – Defendant</p>
-      <p>Date: __________________________</p>
+      <p>__________________________<br>
+      Raymond Perry – Defendant<br>
+      <span class="timestamp"></span></p>
     </div>
 
     <div class="signature-block">
-      <p>_________________________________<br>
-      Authorized Counsel Signature (Mark Briscoe, Public Defender)</p>
-      <p>Date: __________________________</p>
+      <p>__________________________<br>
+      Authorized Counsel Signature (Mark Briscoe, Public Defender)<br>
+      <span class="timestamp"></span></p>
     </div>
   </section>
 </div>
 
-<!-- Plain Version -->
-<div class="plain">
-  <h1>URGENT COURT NOTICE – GOOD CAUSE STATEMENT</h1>
-  <p>
-    On Saturday evening (5:58 PM), my Public Defender informed me: "Court tomorrow."  
-    This implied a Sunday court appearance, which is procedurally impossible.  
-    This miscommunication, combined with my serious health conditions (Lyme Disease), 
-    demonstrates good cause under Penal Code §§ 977, 1043 to excuse any absence and 
-    consider treatment alternatives.
-  </p>
-
-  <h2>Health & Safety Context</h2>
-  <p>
-    I suffer from Lyme Disease and related medical issues which make extended exposure in 
-    detention unsafe. I request alternatives to custody and permission to continue 
-    treatment-based recovery in the community.
-  </p>
-
-  <h2>Authorization for Counsel</h2>
-  <p>
-    I, Raymond Perry, authorize my appointed Public Defender, Mark Briscoe, to sign, file, 
-    and present documents on my behalf, consistent with Penal Code §977.
-  </p>
-
-  <p>__________________________<br>
-  Raymond Perry – Defendant<br>
-  Date: _____________</p>
-
-  <p>__________________________<br>
-  Authorized Counsel Signature (Mark Briscoe, PD)<br>
-  Date: _____________</p>
-</div>
-
-<script>
-  // Default to styled
-  showVersion('styled');
-</script>
+<footer>
+  © 2025 Raymond Perry – Defense Materials. Confidential and privileged under attorney-client relationship.  
+  Not for redistribution without consent.
+</footer>
 
 </body>
 </html>
