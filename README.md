@@ -13,5 +13,4 @@ for any commercial or public purpose without express written permission
 from the author.
 
 This repository is not intended for general public use, nor should it
-be relied upon as legal advice. All materials are for organizational and
-personal preparation purposes only.
+be relied upon as legal advice.
