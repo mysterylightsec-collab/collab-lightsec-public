@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
+      margin: 0; /* fixes left shift */
       padding: 0;
       background: #f4f4f4;
       color: #333;
@@ -61,6 +61,32 @@
       color: #aaa;
       font-size: 14px;
     }
+    /* Collapsible bundles */
+    .bundle-btn {
+      background: #555;
+      color: #fff;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      transition: background 0.3s;
+      border-radius: 4px;
+      margin-bottom: 5px;
+    }
+    .bundle-btn:hover {
+      background: #777;
+    }
+    .bundle-content {
+      display: none;
+      padding: 10px;
+      margin: 5px 0 15px 0;
+      background: #f9f9f9;
+      border-left: 3px solid #555;
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
@@ -93,13 +119,51 @@
 
   <section id="bundles">
     <h2>Bundles</h2>
-    <ul>
-      <li><strong>Defense Motions</strong> — Suppression, Discovery, Alternative Sentencing</li>
-      <li><strong>Supporting Declarations</strong> — Personal statements, family input, treatment history</li>
-      <li><strong>Evidence Packet</strong> — Medical, financial, housing, prior case documents</li>
-      <li><strong>Treatment/Alternatives</strong> — Mental health evaluations, program options</li>
-      <li><strong>Correspondence</strong> — Letters to PD, court, probation, or social services</li>
-    </ul>
+
+    <button class="bundle-btn">Defense Motions</button>
+    <div class="bundle-content">
+      <ul>
+        <li>Motion to Suppress</li>
+        <li>Motion for Discovery</li>
+        <li>Motion for Alternative Sentencing</li>
+      </ul>
+    </div>
+
+    <button class="bundle-btn">Supporting Declarations</button>
+    <div class="bundle-content">
+      <ul>
+        <li>Defendant Declaration</li>
+        <li>Family Statements</li>
+        <li>Treatment Provider Letters</li>
+      </ul>
+    </div>
+
+    <button class="bundle-btn">Evidence Packet</button>
+    <div class="bundle-content">
+      <ul>
+        <li>Medical Records</li>
+        <li>Financial Statements</li>
+        <li>Housing/Employment Docs</li>
+        <li>Prior Case Docs</li>
+      </ul>
+    </div>
+
+    <button class="bundle-btn">Treatment/Alternatives</button>
+    <div class="bundle-content">
+      <ul>
+        <li>Mental Health Evaluations</li>
+        <li>Program Options (rehab, counseling)</li>
+      </ul>
+    </div>
+
+    <button class="bundle-btn">Correspondence</button>
+    <div class="bundle-content">
+      <ul>
+        <li>Letters to PD</li>
+        <li>Probation/Parole Communication</li>
+        <li>Social Services Contacts</li>
+      </ul>
+    </div>
   </section>
 
   <section id="forms">
@@ -107,4 +171,38 @@
     <ul>
       <li><a href="https://www.courts.ca.gov/documents/mc200.pdf" target="_blank">MC-200 – Declaration</a></li>
       <li><a href="https://www.courts.ca.gov/documents/mc410.pdf" target="_blank">MC-410 – Request to Waive Court Fees</a></li>
-      <li><a href="https://www.courts.ca.gov/documents/pos
+      <li><a href="https://www.courts.ca.gov/documents/pos040.pdf" target="_blank">POS-040 – Proof of Service (Civil)</a></li>
+      <li><a href="https://www.courts.ca.gov/forms.htm" target="_blank">CA Forms Index</a></li>
+    </ul>
+  </section>
+
+  <section id="checklist" class="checklist">
+    <h2>Quick Filing Checklist</h2>
+    <ul>
+      <li><input type="checkbox"> Intake Form Complete</li>
+      <li><input type="checkbox"> Reviewed charges and case number</li>
+      <li><input type="checkbox"> Drafted at least one motion</li>
+      <li><input type="checkbox"> Collected supporting declarations</li>
+      <li><input type="checkbox"> Gathered evidence/records</li>
+      <li><input type="checkbox"> Checked deadlines and hearing date</li>
+      <li><input type="checkbox"> Bundled docs for PD submission</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Raymond Perry — Confidential Use Only</p>
+  </footer>
+
+  <script>
+    // Collapsible bundles
+    const buttons = document.querySelectorAll(".bundle-btn");
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+        const content = btn.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>
