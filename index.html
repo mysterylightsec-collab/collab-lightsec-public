@@ -2,75 +2,120 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Defense Bundle – Urgent Filing</title>
+  <title>URGENT Defense Notice – Raymond Perry</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background:#fafafa; }
-    header { background: #fdd; padding: 20px; border: 2px solid #a00; }
+    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; background:#fff; color:#000; }
+    header { background: #fdd; padding: 20px; border: 2px solid #a00; margin-bottom:20px; }
     header h1 { margin: 0; color: #900; font-size: 24px; }
-    header p { margin: 10px 0; font-size: 16px; color: #333; }
-    .notice { font-weight: bold; color: #000; font-size: 18px; background:#ffe; padding:10px; border:1px solid #aa0; }
-    h2 { border-bottom: 2px solid #444; padding-bottom: 5px; }
-    figure { text-align: center; margin: 20px auto; }
-    figcaption { font-size: 12px; color: #333; margin-top: 5px; }
-    .highlight { background:#ff9; padding:5px; }
+    header p { margin: 10px 0; font-size: 16px; color: #000; }
+    .notice { font-weight: bold; font-size: 18px; background:#ffe; padding:15px; border:1px solid #aa0; }
+    h2 { border-bottom: 2px solid #444; padding-bottom: 5px; margin-top:30px; }
+    .signature-block { margin-top:50px; }
+    .plain { display:none; }
+    .toggle-buttons { margin:20px 0; }
+    .toggle-buttons button { padding:10px 15px; margin-right:10px; cursor:pointer; }
   </style>
+  <script>
+    function showVersion(type) {
+      document.querySelector('.styled').style.display = (type==='styled') ? 'block':'none';
+      document.querySelector('.plain').style.display  = (type==='plain') ? 'block':'none';
+    }
+  </script>
 </head>
 <body>
 
-<header>
-  <h1>⚠️ URGENT: Defense Filing Context</h1>
-  <p class="notice">
-    Public Defender <strong>misinformed me about my court date</strong> 
-    (stating “court tomorrow” on Saturday evening, which implied a Sunday appearance that is not possible in California Superior Courts).  
-    This miscommunication, combined with my <span class="highlight">serious health conditions</span> (Lyme Disease and related complications), 
-    demonstrates <strong>good cause</strong> under <em>California Penal Code §§ 977, 1043</em> to excuse any absence and to consider 
-    treatment-based alternatives rather than sanctions.
+<div class="toggle-buttons">
+  <button onclick="showVersion('styled')">Styled Version</button>
+  <button onclick="showVersion('plain')">Plain Version</button>
+  <button onclick="window.print()">🖨 Print</button>
+</div>
+
+<!-- Styled Version -->
+<div class="styled">
+  <header>
+    <h1>⚠️ URGENT COURT NOTICE – GOOD CAUSE STATEMENT</h1>
+    <p class="notice">
+      On <strong>Saturday evening (5:58 PM)</strong>, my Public Defender informed me: 
+      <em>“Court tomorrow.”</em>  
+      This communication implied a <strong>Sunday court appearance</strong> — 
+      an impossibility under California Superior Court procedure.  
+      This miscommunication, combined with my <strong>serious health conditions</strong> 
+      (Lyme Disease and related complications), demonstrates <strong>good cause</strong> 
+      under <em>Penal Code §§ 977, 1043</em> to excuse any absence and to consider 
+      treatment-based alternatives rather than sanctions.
+    </p>
+  </header>
+
+  <section id="health">
+    <h2>Health & Safety Context</h2>
+    <p>
+      I suffer from <strong>Lyme Disease</strong> and related medical issues which make 
+      extended exposure in crowded detention environments unsafe. I respectfully request 
+      the Court consider alternatives to custody and allow me to continue treatment-based 
+      recovery in the community.
+    </p>
+  </section>
+
+  <section id="authorization">
+    <h2>Authorization for Counsel</h2>
+    <p>
+      I, Raymond Perry, authorize my appointed Public Defender, <strong>Mark Briscoe</strong>, 
+      to sign, file, and present documents on my behalf in this matter, and to make any 
+      necessary appearances consistent with <em>California Penal Code §977</em>.  
+      This authorization is made in good faith to ensure my rights and health are protected.
+    </p>
+
+    <div class="signature-block">
+      <p>_________________________________<br>
+      Raymond Perry – Defendant</p>
+      <p>Date: __________________________</p>
+    </div>
+
+    <div class="signature-block">
+      <p>_________________________________<br>
+      Authorized Counsel Signature (Mark Briscoe, Public Defender)</p>
+      <p>Date: __________________________</p>
+    </div>
+  </section>
+</div>
+
+<!-- Plain Version -->
+<div class="plain">
+  <h1>URGENT COURT NOTICE – GOOD CAUSE STATEMENT</h1>
+  <p>
+    On Saturday evening (5:58 PM), my Public Defender informed me: "Court tomorrow."  
+    This implied a Sunday court appearance, which is procedurally impossible.  
+    This miscommunication, combined with my serious health conditions (Lyme Disease), 
+    demonstrates good cause under Penal Code §§ 977, 1043 to excuse any absence and 
+    consider treatment alternatives.
   </p>
-</header>
 
-<section id="licensing">
-  <h2>Licensing Notice</h2>
-  <p>Images used below are licensed under 
-    <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 (CC-BY 4.0)</a>.  
-    Full attribution included. This ensures lawful, transparent, and court-ready presentation.
-  </p>
-</section>
-
-<section id="visuals">
-  <h2>Symbols of Justice (Licensed for Use)</h2>
-
-  <figure>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Lady_Justice%2C_Federal_Court_Building%2C_Saint_Paul%2C_Minnesota.jpg" 
-         alt="Lady Justice" style="max-width:300px;">
-    <figcaption>Lady Justice, Federal Court Building. Licensed under CC-BY 4.0 via Wikimedia Commons.</figcaption>
-  </figure>
-
-  <figure>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Scales_of_Justice.png" 
-         alt="Scales of Justice" style="max-width:300px;">
-    <figcaption>Scales of Justice illustration. Licensed under CC-BY 4.0 via Wikimedia Commons.</figcaption>
-  </figure>
-</section>
-
-<section id="evidence">
-  <h2>Supporting Evidence – Public Defender Miscommunication</h2>
-  <p>The following screenshot shows my Public Defender, Mark Briscoe, informing me that my court date was 
-  <strong>"tomorrow"</strong> (message sent Saturday 5:58 PM). California courts do not conduct hearings on Sundays, 
-  which created unavoidable confusion and contributed directly to my absence.  
-  This provides <strong>good cause</strong> under <em>California Penal Code §§ 977, 1043</em> for excusing any alleged failure to appear.</p>
-
-  <figure>
-    <img src="pd-screenshot.png" alt="PD Message Screenshot" style="max-width:500px; border:1px solid #555;">
-    <figcaption>Screenshot of communication from Public Defender Mark Briscoe, received Saturday 5:58 PM.</figcaption>
-  </figure>
-</section>
-
-<section id="health">
   <h2>Health & Safety Context</h2>
-  <p>I suffer from <strong>Lyme Disease</strong> and associated complications, which make extended exposure in crowded 
-  detention environments medically unsafe. The Court is respectfully urged to consider treatment-oriented 
-  alternatives rather than custodial sanctions.</p>
-</section>
+  <p>
+    I suffer from Lyme Disease and related medical issues which make extended exposure in 
+    detention unsafe. I request alternatives to custody and permission to continue 
+    treatment-based recovery in the community.
+  </p>
+
+  <h2>Authorization for Counsel</h2>
+  <p>
+    I, Raymond Perry, authorize my appointed Public Defender, Mark Briscoe, to sign, file, 
+    and present documents on my behalf, consistent with Penal Code §977.
+  </p>
+
+  <p>__________________________<br>
+  Raymond Perry – Defendant<br>
+  Date: _____________</p>
+
+  <p>__________________________<br>
+  Authorized Counsel Signature (Mark Briscoe, PD)<br>
+  Date: _____________</p>
+</div>
+
+<script>
+  // Default to styled
+  showVersion('styled');
+</script>
 
 </body>
 </html>
